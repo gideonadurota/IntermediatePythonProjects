@@ -1,9 +1,10 @@
 import json
 from typing import Final
 import requests
+# from interface import *
 
 BASE_URL: Final[str] = 'http://api.exchangeratesapi.io/v1/latest'
-API_KEY: Final[str] = '1b2f4157486289842638617d5852fe15'
+API_KEY: Final[str] = ''
 
 def get_rates(mock: bool=False) -> dict:
     if mock:
@@ -35,7 +36,8 @@ def convert_currency(amount: float, base: str, vs: str, rates: dict) -> float:
 
     conversion: float = round((vs_rate / base_rate) * amount, 2)
 
-    print(f'{amount} {base}: {conversion} {vs}')
+    # print(f'{amount} {base}: {conversion} {vs}')
+    return conversion
 
 def main():
     data: dict = get_rates(mock=True)
