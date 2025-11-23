@@ -36,11 +36,13 @@ def check_headlines(headlines: list[str], term: str):
         print('----------------------------------')
         for i, headline in enumerate(terms_list, start=1):
             print(f'{i}: {headline.capitalize()}')
+    else:
+        print(f'"{term}" was not mentioned.')
 
 def main():
     soup = get_soup()
     headlines = get_headlines(soup)
-    term = input('What term would you like to search for?: >>')
+    term = input('What term would you like to search for?: >> ')
     check_headlines(headlines, term)
 
 if __name__ == '__main__':
