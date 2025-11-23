@@ -23,7 +23,7 @@ def check_headlines(headlines: list[str], term: str):
     terms_list: list[str] = []
     terms_found: int = 0
     for i, headline in enumerate(headlines, start=1):
-        if term.lower() in headline:
+        if term.lower() in headline.split():
             terms_found += 1
             terms_list.append(headline)
             print(f'{i}: {headline.capitalize()} <-------------------- "{term}"')
