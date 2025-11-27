@@ -4,7 +4,7 @@ import requests
 # from interface import *
 
 BASE_URL: Final[str] = 'http://api.exchangeratesapi.io/v1/latest'
-API_KEY: Final[str] = '1b2f4157486289842638617d5852fe15'
+API_KEY: Final[str] = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 
 def get_rates(mock: bool=False) -> dict:
     if mock:
